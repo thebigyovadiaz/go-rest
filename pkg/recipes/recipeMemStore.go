@@ -40,7 +40,8 @@ func (m MemStore) List() (map[string]Recipe, error) {
 }
 
 func (m MemStore) Update(name string, recipe Recipe) error {
-	if _, ok := m.list[name]; ok {
+	if r, ok := m.list[name]; ok {
+		recipe.ID = r.ID
 		m.list[name] = recipe
 		return nil
 	}

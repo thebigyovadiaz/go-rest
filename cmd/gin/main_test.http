@@ -1,0 +1,40 @@
+### Home Page
+GET localhost:8020/
+
+### Create a recipe
+POST http://localhost:8020/recipes
+
+{
+"name": "Pasta Carbonara",
+"ingredients": [
+{ "name": "Pasta" },
+{ "name": "Parmesan Cheese" },
+{ "name": "Eggs" },
+{ "name": "Panceta" }
+]
+}
+
+
+### Get list of recipes
+GET http://localhost:8020/recipes
+
+### Get a recipe
+GET http://localhost:8020/recipes/pasta-carbonara
+
+### Update a recipe
+PUT http://localhost:8020/recipes/pasta-carbonara
+
+{
+"name": "Pasta Carbonara",
+"ingredients": [
+{ "name": "Pasta" },
+{ "name": "Parmesan Cheese" },
+{ "name": "Eggs" },
+{ "name": "Panceta" },
+{ "name": "Pepper" }
+]
+}
+
+### Delete a recipe
+DELETE http://localhost:8020/recipes/pasta-carbonara
+
