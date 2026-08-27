@@ -7,7 +7,7 @@ import (
 	"regexp"
 
 	"github.com/gosimple/slug"
-	"github.com/thebigyovadiaz/go-rest/standard-library/recipes"
+	"github.com/thebigyovadiaz/go-rest/pkg/recipes"
 )
 
 func main() {
