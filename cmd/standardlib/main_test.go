@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/thebigyovadiaz/go-rest/standard-library/recipes"
+	"github.com/thebigyovadiaz/go-rest/pkg/recipes"
 )
 
 func readTestData(t *testing.T, name string) []byte {
