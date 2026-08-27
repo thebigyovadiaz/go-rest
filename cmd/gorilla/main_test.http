@@ -1,0 +1,43 @@
+### Home Page
+GET localhost:8010/
+
+### Create a recipe
+POST http://localhost:8010/recipes
+
+{
+"name": "Pasta Bolognesa with Garlic Bread",
+"ingredients": [
+{ "name": "Pasta" },
+{ "name": "Parmesan Cheese" },
+{ "name": "Meat" },
+{ "name": "Tomatoes sauce" },
+{ "name": "Bread" },
+{ "name": "Garlic Cream" }
+]
+}
+
+
+### Get list of recipes
+GET http://localhost:8010/recipes
+
+### Get a recipe
+GET http://localhost:8010/recipes/pasta-carbonara
+
+### Update a recipe
+PUT http://localhost:8010/recipes/pasta-carbonara
+
+{
+"name": "Pasta Bolognesa with Garlic Bread",
+"ingredients": [
+{ "name": "Pasta" },
+{ "name": "Parmesan Cheese" },
+{ "name": "Meat" },
+{ "name": "Tomatoes sauce" },
+{ "name": "Bread" },
+{ "name": "Garlic Cream" }
+]
+}
+
+### Delete a recipe
+DELETE http://localhost:8010/recipes/pasta-bolognesa-with-garlic-bread
+
