@@ -1,6 +1,8 @@
 package recipes
 
-import "errors"
+import (
+	"errors"
+)
 
 var (
 	NotFoundErr = errors.New("not found")
@@ -18,6 +20,8 @@ func NewMemStore() *MemStore {
 }
 
 func (m MemStore) Add(name string, recipe Recipe) error {
+	id := len(m.list) + 1
+	recipe.ID = id
 	m.list[name] = recipe
 	return nil
 }
@@ -36,7 +40,6 @@ func (m MemStore) List() (map[string]Recipe, error) {
 }
 
 func (m MemStore) Update(name string, recipe Recipe) error {
-
 	if _, ok := m.list[name]; ok {
 		m.list[name] = recipe
 		return nil
@@ -46,6 +49,10 @@ func (m MemStore) Update(name string, recipe Recipe) error {
 }
 
 func (m MemStore) Remove(name string) error {
-	delete(m.list, name)
-	return nil
+	if _, ok := m.list[name]; ok {
+		delete(m.list, name)
+		return nil
+	}
+
+	return NotFoundErr
 }

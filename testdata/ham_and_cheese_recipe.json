@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "name": "Ham and cheese toasties",
+  "ingredients": [
+    {
+      "name": "bread"
+    },{
+      "name": "ham"
+    },{
+      "name": "cheese"
+    }
+  ]
+}
