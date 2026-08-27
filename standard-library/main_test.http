@@ -1,0 +1,58 @@
+###
+GET http://localhost:8080
+
+<> 2026-08-26T145831.200.txt
+<> 2026-08-26T142709.200.txt
+
+###
+POST http://localhost:8080/recipes/
+
+{
+"name": "Pasta Bolognesa",
+"ingredients": [
+{ "name": "Pasta" },
+{ "name": "Parmesan Cheese" },
+{ "name": "Meat" },
+{ "name": "Tomatoes sauce" }
+]
+}
+
+
+###
+GET http://localhost:8080/recipes
+
+<> 2026-08-26T145235.200.txt
+<> 2026-08-26T145157.200.txt
+<> 2026-08-26T142830.200.txt
+
+###
+GET http://localhost:8080/recipes/pasta-bolognesa-with-garlic-bread
+
+<> 2026-08-26T145244.404.txt
+<> 2026-08-26T142937.200.txt
+<> 2026-08-26T142920.200.txt
+<> 2026-08-26T142912.404.txt
+
+###
+PUT http://localhost:8080/recipes/pasta-carbonara
+
+{
+"name": "Pasta Carbonara",
+"ingredients": [
+{ "name": "Pasta" },
+{ "name": "Parmesan Cheese" },
+{ "name": "Meat" },
+{ "name": "Eggs" },
+{ "name": "Panceta" },
+{ "name": "Pepper" }
+]
+}
+
+<> 2026-08-26T142852.404.txt
+
+###
+DELETE http://localhost:8080/recipes/pasta-bolognesa-with-garlic-bread
+
+<> 2026-08-26T145133.404.txt
+<> 2026-08-26T145050.404.txt
+
